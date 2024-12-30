@@ -16,6 +16,9 @@ def goto(name):
     print("Went to the website.")
     time.sleep(7)
     text_area = driver.find_element(By.ID, "chat-input-box")
+    text_area.send_keys("Reply in very short and concise.")
+    print("LOADING...")
+    time.sleep(4)
     while True:
         sen = input("YOU: ")
 
@@ -40,7 +43,7 @@ def goto(name):
         #     driver.quit()
         #     break
         # print("Sleeping.")
-        time.sleep(5)
+        time.sleep(7)
 
         ai = driver.find_elements(By.CSS_SELECTOR, r"p.mb-2.last\:mb-0:last-child")
         response = ai[-1].text
